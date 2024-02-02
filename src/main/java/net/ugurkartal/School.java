@@ -15,13 +15,18 @@ public class School {
         }
     }
 
-    public Student findById (int id){
+    public Student findById (int studenId){
         for (Student student : students){
-            if (student.id == id){
+            if (student.id == studenId){
                 return student;
             }
         }
         return null;
+    }
+
+    public void deleteStudentById (int studenId){
+        Student student = this.findById(studenId);
+        students.remove(student);
     }
 
     public List<Course> retrieveAllCourses (int studentId){

@@ -32,9 +32,12 @@ public class Main {
 
         school.printStudents();
 
+        school.deleteStudentById(2);
+        school.printStudents();
+
         System.out.println(school.findById(1));
 
         System.out.println(school.retrieveAllCourses(1));
-        System.out.println(school.retrieveAllCourses(2));
+        System.out.println(school.retrieveAllCourses(3));
     }
 }
